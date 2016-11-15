@@ -1,0 +1,17 @@
+%footer#footer.modal-fade
+	%hr
+	.logo
+		= link_to_image('logo.png', 'http://www.suppleo-conseil.fr', target: :_blank)
+	.content
+		%p!= "Suppleo est une société de conseil en organisation et système d’information spécialisés dans la <span>transformation omnicanale</span> des supply chain et du système d’information, l’adaptation des <span>business model au digital</span>, et l’utilisation du <span>big data</span> dans les prévisions de vente."
+		%p= "La société propose ses services aux entreprises distribuant des produits ou services, et souhaitant améliorer leur logistique, optimiser leurs stocks et développer les compétences humaines."
+		%p= "Notre volonté est d’offrir un service efficace, pragmatique et proche du terrain."
+	.bottom
+		%h4= "© Suppleo-conseil " + Time.now.year.to_s
+		%h4= '|'
+		%h4
+			= "Design par "
+			%span
+				= mail_to 'bitocreator@gmail.com', 'Mastech'
+
+  

@@ -1,0 +1,113 @@
+/* Typographies */
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/assets/Montserrat-Regular.otf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('/assets/Montserrat-SemiBold.otf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('/assets/Montserrat-Light.otf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url('/assets/Montserrat-ExtraLight.otf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Oswald-bold';
+  src: url('/assets/oswald.bold.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Oswald-light';
+  src: url('/assets/oswald.light.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Oswald-regular';
+  src: url('/assets/oswald.regular.otf') format("truetype");
+}
+
+$regular: 'Montserrat-Regular';
+$bold: 'Montserrat-SemiBold';
+$light: 'Montserrat-Light';
+$xlight: 'Montserrat-ExtraLight';
+
+
+ /* Font sizes */
+
+html {font-size: 0.75em;}
+
+body {
+  font-family: $light;
+  line-height: 1.45;
+}
+
+p {margin-bottom: 1em;}
+ul {margin-bottom: 3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4, p, li {font-size: 1.414em;}
+
+h5 {font-size: 1em;}
+
+small, .font_small {font-size: 0.707em;}
+
+/////////////////////////////////////////
+
+a, h1, h2, h3, h4, h5, input {vertical-align: middle;text-decoration: none;}
+a:hover {text-decoration: none; cursor: pointer;}
+
+#flash_msg {font-family: $bold;font-size: 2.827em;}
+
+header {
+    li {font-size: 1em;}
+    h2 {font-family: Oswald-regular}
+    h3 {font-family: Oswald-light}
+    a:hover {font-family: Oswald-bold;}
+    .text{text-align: left;}
+}
+footer {
+    span, a {font-family: $regular;font-size: 10px;}
+    h4 {font-family: $xlight; font-size: 1em;}
+}
+
+#description {
+  span {font-family: $regular;}
+  p:last-of-type {font-family: $regular;}
+}
+
+#join {
+  h4 {font-family: $regular;}
+  .btn_valid {font-family: $regular;font-size: 1.414em;}
+}
+
+
+@media (max-width: 1023px) {
+  input {font-size: 1.414em;}
+  #join {
+    h4 {font-size: 2.827em;}
+    .btn_valid {font-family: $regular;font-size: 1.999em;}
+  }
+
+}
+

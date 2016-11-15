@@ -1,0 +1,28 @@
+%header.modal-fade
+	.content
+		.upper
+			.title
+				.logo
+					= link_to_image('logo.png', 'http://www.suppleo-conseil.fr', target: :_blank)
+				.text
+					%li
+						%h2= "Consultant Supply Chain Omnicanal"
+					%li
+						%h3
+							= link_to 'Suppleo-Conseil', 'http://www.suppleo-conseil.fr', target: :_blank
+
+		.banner
+			%li
+				= image_tag("position.png")
+				%h5= "Lille"
+			%li
+				= image_tag("calendar.png")
+				%h5= "Plein temps"
+			%li
+				= image_tag("experience.png")
+				%h5= "3+ années d'expérience"
+			%li
+				= image_tag("degree.png")
+				%h5= "Master ou enseignement supérieur"
+		%h5.count=# "132 vues"
+	%hr

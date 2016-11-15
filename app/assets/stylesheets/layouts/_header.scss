@@ -1,0 +1,36 @@
+header {
+	margin: 5em 0 0 0;
+	width: 100%;
+	.logo img {height: 50px;vertical-align: middle;}
+	.content {
+		.title { 
+			max-width: 1024px;margin: auto;
+			@include flex-line;
+			li {display: block;}
+			:first-child {margin: 0px 15px 0px 15px;}
+			line-height: 10em;
+		}
+		.banner {
+			max-width: 1024px;margin: 15px auto;
+			@include flex-line;
+			li {
+				@include flex-line;
+				margin: 0px 20px 0px 20px;
+				* {margin: 0px 10px 0px 10px;}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	header {
+		.content .title .text {margin-bottom: 20px;}
+		.content .banner li {
+			margin-top: 10px;
+			* {margin: 0px 10px 10px 10px;}
+		}
+	}
+}
+
+
+

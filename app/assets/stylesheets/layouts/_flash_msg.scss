@@ -1,0 +1,9 @@
+#flash_msg {
+	position: fixed;
+	top: 0;
+	z-index: 3;width:100%;
+	h4 { margin: 0;	}
+	.flash_notice {line-height: 100px;vertical-align: middle;color: white;}
+	.flash_alert {line-height: 100px;vertical-align: middle;color: white;}
+	.flash_success {line-height: 100px;vertical-align: middle;color: white;}
+}

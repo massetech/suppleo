@@ -1,0 +1,108 @@
+/* Mixins */
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+@mixin flex-line {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin flex-tab {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row no-wrap;
+    flex-flow: row no-wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/* Rsponsive devices */
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+/*//$bigscreen: "only screen and (min-width: 1367px)";
+$desktop: "only screen and (min-width: 768px)";
+$tablet: "only screen and (max-width: 767px) and (min-width: 480px)";
+$phone: "only screen and (max-width: 479px)";
+$smallscreen: "only screen and (max-width: 767px)";*/
+
+
+/* Retina images */
+$image-path: '../assets/pictures' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name){
+  background: url(#{$image-path}/#{$name}.#{$fallback-extension}) no-repeat center center;
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    background: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension}) no-repeat center center;
+  }
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Clearfix */
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/* round images */
+.circular {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  display: block;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
