@@ -4,7 +4,8 @@ class ApplyMailer < ActionMailer::Base
   def apply_email(candidate)
   	@candidate = candidate
   	attachments[@candidate.cv_file_name] = File.read(@candidate.cv.path)
-    mail(to: 'bitocreator@gmail.com, t.masse@suppleo-conseil.fr', subject: 'Nouveau candidat !')
+    mail(to: 't.masse@suppleo-conseil.fr', subject: 'Nouveau candidat !')
   end
 
 end
+	
