@@ -31,38 +31,39 @@
 %hr.cut
 
 .c3
-	%h3= "Rejoignez nous !"
-	%ul
-		%li{id: 'img_1'}
-			= link_to 'https://www.linkedin.com/in/s%C3%A9bastien-champetier-de-ribes-22934719', target: :_blank do
-				= image_tag 'Sebastien.png'
-				%h6.name_text= 'Sébastien'
-		%li{id: 'img_2'}
-			= link_to 'https://fr.linkedin.com/in/thibaut-masse-0959736', target: :_blank do
-				= image_tag 'Thibaut.png'
-				%h6.name_text= 'Thibaut' 
-		%li{id: 'img_3'} 
-			= link_to 'https://www.linkedin.com/in/antoineroutaboul', target: :_blank do
-				= image_tag 'Antoine.png'
-				%h6.name_text= 'Antoine'
-	= form_for @candidate, authenticity_token: true do |f|
-		.input-field
-			= f.text_field :name, autocomplete: "off", maxlength: "50", required: true, class: 'validate'
-			= f.label :cv, 'Nom'
-		.input-field
-			= f.text_field :email, maxlength: "50", required: true, type: 'email', pattern: '[^@]+@[^@.]+\.[^@]+', class: 'validate'
-			= f.label :email, 'Email'
-		.file-field.input-field
-			.btn
-				%span= 'CV'
-				= f.file_field :cv, data: {'max-size':"1000"}
-			.file-path-wrapper
-				%input{type:"text", placeholder:"PDF, 5Mo max", class:'file-path validate'}
-		.input-field
-			= f.text_area :message, maxlength: "700", class: "materialize-textarea validate"
-			= f.label :message, 'Message'
-		.input-field
-			= f.submit 'Postuler', class: 'btn_valid'
+	.frame
+		%h3= "Rejoignez nous !"
+		%ul
+			%li{id: 'img_1'}
+				= link_to 'https://www.linkedin.com/in/s%C3%A9bastien-champetier-de-ribes-22934719', target: :_blank do
+					= image_tag 'Sebastien.png'
+					%h6.name_text= 'Sébastien'
+			%li{id: 'img_2'}
+				= link_to 'https://fr.linkedin.com/in/thibaut-masse-0959736', target: :_blank do
+					= image_tag 'Thibaut.png'
+					%h6.name_text= 'Thibaut' 
+			%li{id: 'img_3'} 
+				= link_to 'https://www.linkedin.com/in/antoineroutaboul', target: :_blank do
+					= image_tag 'Antoine.png'
+					%h6.name_text= 'Antoine'
+		= form_for @candidate, authenticity_token: true do |f|
+			.input-field
+				= f.text_field :name, autocomplete: "off", maxlength: "50", required: true, class: 'validate'
+				= f.label :cv, 'Nom'
+			.input-field
+				= f.text_field :email, maxlength: "50", required: true, type: 'email', pattern: '[^@]+@[^@.]+\.[^@]+', class: 'validate'
+				= f.label :email, 'Email'
+			.file-field.input-field
+				.btn
+					%span= 'CV'
+					= f.file_field :cv, data: {'max-size':"1000"}
+				.file-path-wrapper
+					%input{type:"text", placeholder:"PDF, 5Mo max", class:'file-path validate'}
+			.input-field
+				= f.text_area :message, maxlength: "700", class: "materialize-textarea validate"
+				= f.label :message, 'Message'
+			.input-field
+				= f.submit 'Postuler', class: 'btn_valid'
 
 .c4
 	%h3.centered= "Rejoignez une équipe dynamique, passionnée et motivée et développez vos talents chez des enseignes majeures de la distribution (Bricolage, auto, déco, sport) ! ... "
