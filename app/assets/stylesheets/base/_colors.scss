@@ -5,7 +5,8 @@ $light-grey: rgba(121,121,121,0.1);;
 $green: #235C07;
 $orange: #E95724;
 
-a, h1, h2, h3, h4, h5, small, input, p, li {color: $grey;}
+a, h1, h4, h5, small, input, p, li {color: $grey;}
+h2, h3 {color: $green;}
 hr {border: 1px solid $light-grey;}
 
 #flash_msg {
@@ -26,6 +27,7 @@ header, footer {
 
 header .upper {
 	background-color: $light-grey;
+	h2, h3 {color: $grey;}
 }
 
 footer {
@@ -33,14 +35,18 @@ footer {
 	.bottom span a {color: $green;}
 }
 
+span {color: $orange}
+
 #description {
-    span {color: $orange}
+    
     p:last-of-type {color: $green;}
 }
 
-#join {
-	.name_text {color: $grey;}
+.c3 {
 	h4 {color: $green;}
+	span {color: white;}
+	background-color: $light-grey;
+	.name_text {color: $grey;}
 	.btn_valid {background: $green;color: #FFFFFF;}
-	.frame {background-color: $light-grey;}
 }
+

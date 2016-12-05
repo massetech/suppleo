@@ -1,9 +1,10 @@
-//@import "compass";
+// Adding external rules
 @import "materialize";
-@import "base/*";
+@import "modular-scale";
+@import "typi/scss/typi";
+
+// Adding internal rules
 @import "helpers/*";
+@import "base/*";
 @import "layouts/*";
 @import "pages/*";
-@import "components/*";
-
-

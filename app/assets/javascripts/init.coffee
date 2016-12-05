@@ -31,7 +31,7 @@ show_flash = ->
 		$('#flash_msg')
 			.fadeOut 2000, ->
 				$(this).empty()
-	, 600000
+	, 6000
 	console.log 'Flash fired'
 
 

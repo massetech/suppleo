@@ -1,73 +1,77 @@
-#content.flex-grid
-	#empty.col
-	#description.col
-		%p!= "Consultant Suppleo, vous accompagnez nos clients dans leur <span>transformation omnicanale et digitale</span>, et intervennez  dans leurs <span>projets de transformation de la supply chain</span> :"
-		%ul
-			%li.indent= "- Optimisation des flux d’appro, des stocks et des flux logistiques"
-			%li.indent= "- Mise en place d’outils de Supply Chain Planning  (APS)"
-			%li.indent= "- Mise en place d’outils Omni-canal (Order Management)"
-			%li.indent= "- Définition et revue du réseau logistique"
+.c1
+	%p!= "Consultant Suppleo, vous accompagnez nos clients dans leur <span>transformation omnicanale et digitale</span>, et intervennez  dans leurs <span>projets de transformation de la supply chain</span> :"
+	%ul
+		%li.indent
+			%h4.first= "- Optimisation des flux d’appro, des stocks et des flux logistiques"
+		%li.indent
+			%h4= "- Mise en place d’outils de Supply Chain Planning  (APS)"
+		%li.indent
+			%h4= "- Mise en place d’outils Omni-canal (Order Management)"
+		%li.indent
+			%h4= "- Définition et revue du réseau logistique"
+.c2
+	%ul
+		%li.indent
+			= image_tag('check.png') 
+			%h4= "Développez votre esprit d’analyse sur des missions de diagnostic, de pré-étude, et d’étude de cadrage"
+		%li.indent
+			= image_tag('check.png') 
+			%h4= "Gagnez en expertise : assistance à maîtrise d’ouvrage et maîtrise d’oeuvre sur des problématiques de pointe"
+		%li.indent
+			= image_tag('check.png') 
+			%h4= "Exprimez votre responsabilités de chef de projet et d’animation d’équipe projet"
+		%li.indent
+			= image_tag('check.png') 
+			%h4= "Participez à la croissance de l’entreprise en développant le portefeuille client, les prospects et le recrutement"
+	%p= "Vous êtes passionné par la révolution digitale et ses impacts sur la Supply Chain et la logistique ?"
+	%p= "Vous avez une expérience en approvisionnement, logistique ou omnicanal, et êtes à l’aise avec au moins un  ERP du marché ?"
+	%p= "Vous êtes organisé, pragmatique, avec un fort esprit d’analyse ?"
+	%p= "Votre relationnel et votre proximité du terrain vous donnent une posture de consultant interne ou externe ?"
 
-		%ul
-			%li.expect
-				= image_tag('check.png') 
-				= "Développez votre esprit d’analyse sur des missions de diagnostic, de pré-étude, et d’étude de cadrage"
-			%li.expect
-				= image_tag('check.png') 
-				= "Gagnez en expertise : assistance à maîtrise d’ouvrage et maîtrise d’oeuvre sur des problématiques de pointe"
-			%li.expect
-				= image_tag('check.png') 
-				= "Exprimez votre responsabilités de chef de projet et d’animation d’équipe projet"
-			%li.expect
-				= image_tag('check.png') 
-				= "Participez au fort développement de l’entreprise en développant le portefeuille client, les prospects et le recrutement"
-		%p= "Vous êtes passionné par la révolution digitale et ses impacts sur la Supply Chain et la logistique ?"
-		%p= "Vous avez une expérience en approvisionnement, logistique ou omnicanal, et êtes à l’aise dans au moins un  ERP du marché ?"
-		%p= "Vous êtes organisé, pragmatique, avec un fort esprit d’analyse ?"
-		%p= "Votre relationnel et votre proximité du terrain vous donnent une posture de consultant interne ou externe ?"
-		%p.centered= "Rejoignez une équipe dynamique, passionnée et motivée qui vous permettra de développer vos talents et votre expertise chez des enseignes majeures de la distribution (Bricolage, auto, déco, sport) ! ... "
+%hr.cut
 
-	#join.col
-		.frame
-			%h4= "Rejoignez nous !"
-			%ul
-				%li{id: 'img_1'}
-					= link_to 'https://www.linkedin.com/in/s%C3%A9bastien-champetier-de-ribes-22934719', target: :_blank do
-						= image_tag 'Sebastien.png'
-						%h6.name_text= 'Sébastien'
-				%li{id: 'img_2'}
-					= link_to 'https://fr.linkedin.com/in/thibaut-masse-0959736', target: :_blank do
-						= image_tag 'Thibaut.png'
-						%h6.name_text= 'Thibaut' 
-				%li{id: 'img_3'} 
-					= link_to 'https://www.linkedin.com/in/antoineroutaboul', target: :_blank do
-						= image_tag 'Antoine.png'
-						%h6.name_text= 'Antoine'
-			= form_for @candidate, authenticity_token: true do |f|
-				.input-field
-					= f.text_field :name, autocomplete: "off", maxlength: "50", required: true, class: 'validate'
-					= f.label :cv, 'Nom'
-				.input-field
-					= f.text_field :email, maxlength: "50", required: true, type: 'email', pattern: '[^@]+@[^@.]+\.[^@]+', class: 'validate'
-					= f.label :email, 'Email'
-				.file-field.input-field
-					.btn
-						%span= 'CV'
-						= f.file_field :cv, data: {'max-size':"1000"}
-					.file-path-wrapper
-						%input{type:"text", placeholder:"PDF, 5Mo max", class:'file-path validate'}
-				.input-field
-					= f.text_area :message, maxlength: "700", class: "materialize-textarea validate"
-					= f.label :message, 'Message'
-				.input-field
-					= f.submit 'Postuler', class: 'btn_valid'
-		
+.c3
+	%h3= "Rejoignez nous !"
+	%ul
+		%li{id: 'img_1'}
+			= link_to 'https://www.linkedin.com/in/s%C3%A9bastien-champetier-de-ribes-22934719', target: :_blank do
+				= image_tag 'Sebastien.png'
+				%h6.name_text= 'Sébastien'
+		%li{id: 'img_2'}
+			= link_to 'https://fr.linkedin.com/in/thibaut-masse-0959736', target: :_blank do
+				= image_tag 'Thibaut.png'
+				%h6.name_text= 'Thibaut' 
+		%li{id: 'img_3'} 
+			= link_to 'https://www.linkedin.com/in/antoineroutaboul', target: :_blank do
+				= image_tag 'Antoine.png'
+				%h6.name_text= 'Antoine'
+	= form_for @candidate, authenticity_token: true do |f|
+		.input-field
+			= f.text_field :name, autocomplete: "off", maxlength: "50", required: true, class: 'validate'
+			= f.label :cv, 'Nom'
+		.input-field
+			= f.text_field :email, maxlength: "50", required: true, type: 'email', pattern: '[^@]+@[^@.]+\.[^@]+', class: 'validate'
+			= f.label :email, 'Email'
+		.file-field.input-field
+			.btn
+				%span= 'CV'
+				= f.file_field :cv, data: {'max-size':"1000"}
+			.file-path-wrapper
+				%input{type:"text", placeholder:"PDF, 5Mo max", class:'file-path validate'}
+		.input-field
+			= f.text_area :message, maxlength: "700", class: "materialize-textarea validate"
+			= f.label :message, 'Message'
+		.input-field
+			= f.submit 'Postuler', class: 'btn_valid'
 
+.c4
+	%h3.centered= "Rejoignez une équipe dynamique, passionnée et motivée et développez vos talents chez des enseignes majeures de la distribution (Bricolage, auto, déco, sport) ! ... "
 
+	%hr
+	.logo
+		= link_to_image('logo.png', 'http://www.suppleo-conseil.fr', target: :_blank)
+	.content
+		%p!= "Suppleo est une société de conseil en organisation et système d’information spécialisés dans la <span>transformation omnicanale</span> des supply chain et du système d’information, l’adaptation des <span>business model au digital</span>, et l’utilisation du <span>big data</span> dans les prévisions de vente."
+		%p= "La société propose ses services aux entreprises distribuant des produits ou services, et souhaitant améliorer leur logistique, optimiser leurs stocks et développer les compétences humaines."
+		%p= "Notre volonté est d’offrir un service efficace, pragmatique et proche du terrain."
 
-
-
-
-	
-	
-	

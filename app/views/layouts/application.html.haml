@@ -1,15 +1,20 @@
 !!! 5
 %html
-  %title= 'Suppleo-Conseil'
-  = csrf_meta_tags
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %head
+    %title="Rejoignez Suppleo Conseil !"
+    %meta{:charset => "utf-8"}
+    %meta{content: "", name: "Rejoignez les équipes de Suppleo Conseil "}
+    %meta{content: "", name: "Suppleo Conseil"}
+    %meta{name: "viewport", content: "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-%body
-  #flash_msg.modal-fade
-    = render_flash
-  = render partial: 'public/header'
-  %main#main
-    #render.modal-fade
-      = yield
-  = render partial: 'public/footer'
+  %body
+    #flash_msg.modal-fade
+      = render_flash
+    = render partial: 'public/header'
+    %main#main
+      .cont.modal-fade
+        = yield
+    = render partial: 'public/footer'
