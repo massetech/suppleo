@@ -5,12 +5,12 @@ App.init = ->
 	
 
 $(document).on "turbolinks:load", ->
-  App.init()
-	
+  #App.init()
+  init_flash()
+  init_google_analytics()
 
 # -------------------------------  JS functions  --------------------------------------------
 
-# Init flash
 init_flash = ->
 	$('#flash_msg').hide()
 	#console.log 'Flash loaded'
@@ -22,7 +22,6 @@ init_flash = ->
 		$(this).fadeOut 2000, ->
 			$(this).empty()
 	
-# Show flash messages
 show_flash = ->
 	setTimeout ->
 		$('#flash_msg').fadeIn 1000
@@ -34,4 +33,7 @@ show_flash = ->
 	, 6000
 	console.log 'Flash fired'
 
-
+init_google_analytics = ->
+  if typeof ga is 'function'
+    ga('set', 'location', event.data.url)
+    ga('send', 'pageview')
