@@ -14,11 +14,12 @@ gem 'haml'
 
 # Custom gems
 gem 'normalize-rails'
+gem "modular-scale"
 gem 'bootstrap-modal-rails'
 gem "paperclip"
 gem "figaro"
 gem 'materialize-rails'
-gem "modular-scale"
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
