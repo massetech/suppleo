@@ -4,12 +4,13 @@ header {
 	.upper {
 		@include flexbox;@include flex-flow(column nowrap);@include justify-content(center);
 		li {display: block;}
-		img {height: 60px;vertical-align: middle;}
-		h2, h3 {line-height: 0.5;}
+		img {height: 70px;vertical-align: middle;}
+		h2, h3 {line-height: 1;}
 		line-height: 5em;
 		.u1 {margin-top: 1em;}
-		.u2 {@include flexbox;@include align-items(center);}
+		.u2 {@include flexbox;@include align-items(center);@include justify-content(center)}
 		.bullets {text-align: center;padding: 0 20px;}
+		.hide {display: none}
 	}
 	.banner {
 		max-width: 1024px;margin: 15px auto;
@@ -22,9 +23,12 @@ header {
 	header {
 		.upper {
 			@include flex-flow(row nowrap);
+			img {height: 60px;}
+			h2, h3 {line-height: 0.5;}
 			line-height: 10em;
 			.u1 {margin-top: 0;}
 			.bullets { text-align: left; padding: 0px 0px 0px 50px;}
+			.hide {display: block !important}
 		}
 		.banner {
 			li {margin: 0px 30px 0px 30px;}

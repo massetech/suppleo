@@ -1,12 +1,16 @@
 /* Typographies */
 
-@font-face {font-family: 'Montserrat-Regular'; src: url('/assets/Montserrat-Regular.otf') format("truetype");}
-@font-face {font-family: 'Montserrat-SemiBold'; src: url('/assets/Montserrat-SemiBold.otf') format("truetype");}
-@font-face {font-family: 'Montserrat-Light'; src: url('/assets/Montserrat-Light.otf') format("truetype");}
-@font-face {font-family: 'Montserrat-ExtraLight'; src: url('/assets/Montserrat-ExtraLight.otf') format("truetype");}
-@font-face {font-family: 'Oswald-bold'; src: url('/assets/oswald.bold.otf') format("truetype");}
-@font-face {font-family: 'Oswald-light'; src: url('/assets/oswald.light.otf') format("truetype");}
-@font-face {font-family: 'Oswald-regular'; src: url('/assets/oswald.regular.otf') format("truetype");}
+@font-face {font-family: 'Montserrat-ExtraLight'; src: url('<%= asset_path("Montserrat-Regular.otf") %>') format("truetype");}
+@font-face {font-family: 'Montserrat-ExtraLight'; src: url('<%= asset_path("Montserrat-SemiBold.otf") %>') format("truetype");}
+@font-face {font-family: 'Montserrat-ExtraLight'; src: url('<%= asset_path("Montserrat-Light.otf") %>') format("truetype");}
+@font-face {font-family: 'Montserrat-ExtraLight'; src: url('<%= asset_path("Montserrat-ExtraLight.otf") %>') format("truetype");}
+//@font-face {font-family: 'Montserrat-Regular'; src: url('/assets/Montserrat-Regular.otf') format("truetype");}
+//@font-face {font-family: 'Montserrat-SemiBold'; src: url('/assets/Montserrat-SemiBold.otf') format("truetype");}
+//@font-face {font-family: 'Montserrat-Light'; src: url('/assets/Montserrat-Light.otf') format("truetype");}
+//@font-face {font-family: 'Montserrat-ExtraLight'; src: url('/assets/Montserrat-ExtraLight.otf') format("truetype");}
+//@font-face {font-family: 'Oswald-bold'; src: url('/assets/oswald.bold.otf') format("truetype");}
+//@font-face {font-family: 'Oswald-light'; src: url('/assets/oswald.light.otf') format("truetype");}
+//@font-face {font-family: 'Oswald-regular'; src: url('/assets/oswald.regular.otf') format("truetype");}
 
 $regular: 'Montserrat-Regular';
 $bold: 'Montserrat-SemiBold';
