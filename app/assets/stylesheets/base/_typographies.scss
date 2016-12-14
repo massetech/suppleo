@@ -1,13 +1,9 @@
 /* Typographies */
 
-@font-face {font-family: 'Montserrat-Regular'; src: url('<%= asset_path("Montserrat-Regular.otf") %>') format("truetype");}
-@font-face {font-family: 'Montserrat-SemiBold'; src: url('<%= asset_path("Montserrat-SemiBold.otf") %>') format("truetype");}
-@font-face {font-family: 'Montserrat-Light'; src: url('<%= asset_path("Montserrat-Light.otf") %>') format("truetype");}
-@font-face {font-family: 'Montserrat-ExtraLight'; src: url('<%= asset_path("Montserrat-ExtraLight.otf") %>') format("truetype");}
-//@font-face {font-family: 'Montserrat-Regular'; src: url('/assets/Montserrat-Regular.otf') format("truetype");}
-//@font-face {font-family: 'Montserrat-SemiBold'; src: url('/assets/Montserrat-SemiBold.otf') format("truetype");}
-//@font-face {font-family: 'Montserrat-Light'; src: url('/assets/Montserrat-Light.otf') format("truetype");}
-//@font-face {font-family: 'Montserrat-ExtraLight'; src: url('/assets/Montserrat-ExtraLight.otf') format("truetype");}
+@font-face {font-family: 'Montserrat-Regular'; src: asset-url("fonts/Montserrat-Regular.otf") format("truetype");}
+@font-face {font-family: 'Montserrat-SemiBold'; src: asset-url("fonts/Montserrat-SemiBold.otf") format("truetype");}
+@font-face {font-family: 'Montserrat-Light'; src: asset-url("fonts/Montserrat-Light.otf") format("truetype");}
+@font-face {font-family: 'Montserrat-ExtraLight'; src: asset-url("fonts/Montserrat-ExtraLight.otf") format("truetype");}
 
 $regular: 'Montserrat-Regular';
 $bold: 'Montserrat-SemiBold';
