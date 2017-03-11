@@ -96,6 +96,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    mailgunner (2.4.0)
     materialize-rails (0.97.5.2)
       jquery-rails
       sass-rails
@@ -207,6 +208,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mailgunner
   materialize-rails
   modular-scale
   normalize-rails

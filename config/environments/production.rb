@@ -11,16 +11,13 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = false
     config.action_mailer.perform_caching = false
-    # SMTP settings for gmail
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-     :address              => "smtp.gmail.com",
-     :port                 => 587,
-     :user_name            => ENV['gmail_username'],
-     :password             => ENV['gmail_password'],
-     :authentication       => "plain",
-    :enable_starttls_auto => true
-  }
+
+    #config.action_mailer.delivery_method = :smtp
+    config.action_mailer.delivery_method = :mailgun
+    config.action_mailer.mailgun_settings = {
+      domain: ENV['MAILGUN_DOMAIN']
+      api_key: ENV['MAILGUN_API_KEY']
+    }
 
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify

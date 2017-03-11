@@ -2,7 +2,6 @@ class CandidatesController < ApplicationController
 	include ApplicationHelper
 
 	def welcome
-		#flash_message('success', 'Bienvenue !')
 		@candidate = Candidate.new
 		render 'public/welcome'
 	end
