@@ -17,7 +17,7 @@ class CandidatesController < ApplicationController
 	        format.html {redirect_to root_path}
 	    else
 	    	flash_message('alert', 'Impossible de poster votre candidature. Vérifiez le formulaire...')
-	    	format.html {redirect_to(:back)}
+	    	format.html {redirect_to root_path}
 	      end
 	    end
 	end

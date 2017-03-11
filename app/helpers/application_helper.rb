@@ -28,10 +28,10 @@ module ApplicationHelper
 						else
 							content = message
 						end
-						rendered << content_tag(:h4, content, class: "flash_#{type} flash")
+						rendered << content_tag(:h2, content, class: "flash_#{type} flash")
 					end
 				else
-					rendered << content_tag(:h4, msg, class: "flash_#{type} flash")   			
+					rendered << content_tag(:h2, msg, class: "flash_#{type} flash")   			
 				end
 	  	end
 	  	flash.clear
