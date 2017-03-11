@@ -54,7 +54,7 @@
 				= f.text_field :email, maxlength: "50", required: true, type: 'email', pattern: '[^@]+@[^@.]+\.[^@]+', class: 'validate'
 				= f.label :email, 'Email'
 			.file-field.input-field
-				.btn
+				.btn.orange
 					%span= 'CV'
 					= f.file_field :cv, data: {'max-size':"1000"}
 				.file-path-wrapper

@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'sqlite3'
+gem 'pg'
+gem 'rails_12factor', group: :production
 gem 'puma'
 gem 'sass-rails'
 gem 'compass-rails'
@@ -33,3 +34,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby "2.3.3"

@@ -9,6 +9,7 @@
 .c2 {
 	p:first-of-type {margin-top: 40px;}
 	li:not(:last-child) {margin-bottom: 1em;}
+	img {width: 25px;height: 25px;}
 }
 
 .c3 {
@@ -38,7 +39,7 @@
 
 @media (min-width: 1024px) {
 	.c3 {
-		img {margin: 0px 5px;width: 70px;}
+		img {margin: 0px 5px 15px 5px;width: 70px;}
 		.btn_valid {width: 160px;height: 60px;}
 	}
 	.c4 img {height: 80px;}
