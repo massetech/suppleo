@@ -5,7 +5,7 @@ class ApplyMailer < ActionMailer::Base
   	@candidate = candidate
   	attachments[@candidate.cv_file_name] = File.read(@candidate.cv.path)
     mail(
-    	to: 't.masse@suppleo-conseil.fr, s.champetier@suppleo-conseil.fr, a.routaboul@suppleo-conseil.fr',
+    	to: 't.masse@suppleo-conseil.fr',
     	subject: 'Nouveau candidat !'
     )
   end
